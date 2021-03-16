@@ -1,0 +1,7 @@
+{
+    "id": "android_canvas_old",
+    "attributes": ["android"],
+    "location": "http://insert_your_internal_ip_here:3000/android_demo/android_canvas.wasm",
+    "dependencies": {
+    }
+}

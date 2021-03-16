@@ -1,0 +1,7 @@
+{
+    "id": "android_bmp_invert",
+    "attributes": ["android"],
+    "location": "http://insert_your_internal_ip_here:3000/android_demo/android_bmp_invert.wasm",
+    "dependencies": {
+    }
+}

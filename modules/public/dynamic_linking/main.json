@@ -1,0 +1,12 @@
+{
+    "id": "main",
+    "attributes": [],
+    "location": "http://insert_your_internal_ip_here:3000/dynamic_linking/main.wasm",
+    "dependencies": {
+        "side": {
+            "location": "http://insert_your_internal_ip_here:3000/api",
+            "id": "side",
+            "loadTime": false
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "id": "android",
+    "attributes": ["android"],
+    "location": "http://insert_your_internal_ip_here:3000/android_demo/android.wasm",
+    "dependencies": {
+        "android_chatbot": {
+            "location": "http://insert_your_internal_ip_here:3000/api",
+            "id": "android_chatbot",
+            "loadTime": false
+        },
+        "android_canvas": {
+            "location": "http://insert_your_internal_ip_here:3000/api",
+            "id": "android_canvas",
+            "loadTime": false
+        },
+        "android_bmp_invert": {
+            "location": "http://insert_your_internal_ip_here:3000/api",
+            "id": "android_bmp_invert",
+            "loadTime": false
+        },
+        "android_bmp_grayscale": {
+            "location": "http://insert_your_internal_ip_here:3000/api",
+            "id": "android_bmp_grayscale",
+            "loadTime": false
+        }
+    }
+}

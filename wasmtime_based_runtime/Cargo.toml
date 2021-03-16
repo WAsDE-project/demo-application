@@ -1,0 +1,47 @@
+[package]
+name = "runtime"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "runtime-binary"
+path = "src/main.rs"
+bench = false
+
+[lib]
+crate-type = ["rlib", "dylib"]
+
+[dependencies]
+wasmtime = {version = "0.21"}
+#wasi deps
+wasmtime-wasi = {version = "0.21", optional=true}
+wasi-common = {version = "0.21", optional=true}
+
+wat = "1.0.22"
+lazy_static = "1.4.0"
+anyhow = "1.0.32"
+
+manager = { path = "../manager"}
+
+# Android deps
+jni = { version = "0.13.1", default-features = false, optional = true }
+android_logger = {version = "0.8", optional = true}
+
+# Logging deps
+log = {version = "0.4", optional = true}
+simplelog = {version = "0.9", optional = true}
+
+[features]
+enable_wasi = ["wasmtime-wasi", "wasi-common"] # WASI is not functional on android yet, this may be fixed in later wasmtime versions
+android_build = ["jni"]
+desktop_build = ["simplelog"]
+# Different logging options, use none to disable logging entirely
+use_log = ["log"] # host::init_logging must be called once before logs show
+use_println = []
+
+# Uncomment this for Desktop and Raspberry Pi build.
+#default = ["use_println", "enable_wasi"]
+
+# Uncomment this for Android build.
+#default = ["android_build"]
+
